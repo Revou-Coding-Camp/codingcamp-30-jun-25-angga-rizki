@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const homeHeader = $('#home header');
+    const homeHeader = $('#home header b');
     const name = prompt('Masukkan nama Anda: ');
     if (name) homeHeader.text('Hi, ' + name);
 });

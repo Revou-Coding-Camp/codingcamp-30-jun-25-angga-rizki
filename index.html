@@ -41,11 +41,11 @@
         <!-- Home Section -->
         <section id="home" class="min-h-[250px] text-center">
             <header class="py-[32px] text-center">
-                <h2>Welcome</h2>
+                <b class="text-lg">Welcome</b>
             </header>
 
             <!-- Banner -->
-            <div class="slideshow-container h-[200px]">
+            <div class="slideshow-container h-[250px]">
                 <div class="slide h-[100%]">
                     <img src="./img/banner1.jpg" class="h-[100%] w-[100%]">
                 </div>
@@ -154,17 +154,25 @@
         </section>
 
         <!-- Portfolio Section -->
-        <section id="portfolio" class="min-h-[250px]  text-center">
-            <header class="py-[32px]">
-                <h2>Portfolio</h2>
-            </header>
+        <section id="portfolio" class="min-h-[250px] mb-5 text-center">
+            <div class="py-[32px] text-center">
+                <b class="text-lg">Portfolio</b>
+            </div>
 
-            <article>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </article>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mx-5 md:mx-20">
+                <div class="aspect-square mx-auto max-h-[350px] md:max-h-[auto]">
+                    <img src="./img/portfolio1.jpg" class="h-[100%] w-[100%] rounded-full drop-shadow hover-effect">
+                </div>
+
+                <div class="aspect-square mx-auto max-h-[350px] md:max-h-[auto]">
+                    <img src="./img/portfolio2.jpg" class="h-[100%] w-[100%] rounded-full drop-shadow hover-effect">
+                </div>
+
+                <div class="aspect-square mx-auto max-h-[350px] md:max-h-[auto]">
+                    <img src="./img/portfolio3.jpg" class="h-[100%] w-[100%] rounded-full drop-shadow hover-effect">
+                </div>
+            </div>
         </section>
-
-        <hr />
 
         <!-- Message Us Section -->
         <section id="message-us" class="min-h-[250px]">
