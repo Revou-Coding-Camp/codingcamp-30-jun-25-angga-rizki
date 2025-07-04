@@ -1,3 +1,9 @@
+$(document).ready(function () {
+    const homeHeader = $('#home header');
+    const name = prompt('Masukkan nama Anda: ');
+    if (name) homeHeader.text('Hi, ' + name);
+});
+
 // Function to validate the form
 function validateForm() {
     // Get the input element by its ID
