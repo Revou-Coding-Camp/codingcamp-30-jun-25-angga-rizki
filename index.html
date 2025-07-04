@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Yama</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header p-[12px]">
+        <!-- Logo -->
+        <div class="main-logo"></div>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#our-profile">Our Profile</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#message-us">Message Us</a>
+        </nav>
+    </header>
+
+    <hr />
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="min-h-[250px] text-center">
+            <header class="py-[32px] text-center">
+                <h2>Welcome to My Website</h2>
+            </header>
+
+            <!-- Banner -->
+            <div class="h-[150px] bg-[url('https://picsum.photos/500')] bg-cover bg-center"></div>
+        </section>
+
+        <hr />
+
+        <!-- Our Profile Section -->
+        <section id="our-profile" class="min-h-[250px]  text-center">
+            <header class="py-[32px]">
+                <h2>Our Profile</h2>
+            </header>
+
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="min-h-[250px]  text-center">
+            <header class="py-[32px]">
+                <h2>Portfolio</h2>
+            </header>
+
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+        </section>
+
+        <hr />
+
+        <!-- Message Us Section -->
+        <section id="message-us" class="min-h-[250px]">
+            <header class="py-[32px] text-center">
+                <h2>Message Us</h2>
+            </header>
+
+            <div class="flex justify-between items-center px-[16px]">
+                <!-- Message Form -->
+                <form>
+                    <div>
+                        <label for="name-input">Name:</label>
+                        <input type="text" id="name-input" name="name"
+                            class="border border-gray-300 rounded p-[8px] w-full">
+                    </div>
+
+                    <div class="py-[16px]">
+                        <button type="button" class="border rounded p-[8px] bg-blue-200 text-white"
+                            onclick="validateForm();">Send
+                            Message</button>
+                    </div>
+                </form>
+
+                <!-- Result Form -->
+                <aside class="py-[16px]">
+                    <p id="result-form">Thank you for your message!</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2025 My Website</p>
+    </footer>
+
+    <!-- JS External -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
