@@ -21,9 +21,13 @@ main {
 .main-logo {
     height: 50px;
     width: 50px;
-    background-image: url(https://picsum.photos/200);
+    background-image: url(../img/logo.png);
     background-size: cover;
     border-radius: 50%;
+}
+
+header {
+    box-shadow: rgba(30, 29, 27, 0.08) 0px 1px 0px 0px;
 }
 
 nav {
@@ -31,8 +35,18 @@ nav {
 }
 
 nav>a {
-    border: 1px solid;
     padding: 8px;
-    color: black;
+    color: rgba(0, 0, 0, .65);
     text-decoration: none;
+}
+
+nav>a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.blur {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    filter: unset;
 }
