@@ -7,7 +7,7 @@
 .main-logo {
     height: 50px;
     width: 50px;
-    background-image: url(https://picsum.photos/200);
+    background-image: url(../img/logo.png);
     background-size: cover;
     border-radius: 50%;
 }
