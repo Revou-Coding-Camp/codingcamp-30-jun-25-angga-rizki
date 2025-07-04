@@ -1,0 +1,14 @@
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slide img {
+    object-fit: cover;
+}
+
+.active {
+  background-color: #717171;
+}
