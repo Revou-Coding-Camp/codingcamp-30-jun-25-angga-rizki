@@ -8,12 +8,16 @@
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/banner.css">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Plugin: jQuery -->
     <script src="./plugin/jquery-3.7.1.min.js"></script>
+
+    <!-- JS External -->
+     <script src="./js/banner.js"></script>
 </head>
 
 <body>
@@ -40,8 +44,18 @@
             </header>
 
             <!-- Banner -->
-            <div class="h-[150px] bg-[url('https://picsum.photos/500')] bg-cover bg-center"></div>
+            <div class="slideshow-container h-[200px]">
+                <div class="slide h-[100%]">
+                    <img src="./img/banner1.jpg" class="h-[100%] w-[100%]">
+                </div>
+
+                <div class="slide h-[100%]">
+                    <img src="./img/banner2.jpg" class="h-[100%] w-[100%]">
+                </div>
+            </div>
+            <!-- /.Banner -->
         </section>
+        <!-- /.Home Section -->
 
         <hr />
 
