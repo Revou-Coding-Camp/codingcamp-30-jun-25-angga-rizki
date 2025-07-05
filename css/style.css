@@ -2,6 +2,16 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 204, 112, 0.3), transparent 15%),
+        /* oren */
+        radial-gradient(circle at 60% 20%, rgba(255, 128, 128, 0.1), transparent 10%),
+        /* merah */
+        radial-gradient(circle at 70% 60%, rgba(150, 255, 150, 0.3), transparent 15%),
+        /* hijau */
+        radial-gradient(circle at 20% 70%, rgba(100, 150, 255, 0.3), transparent 10%),
+        /* biru */
+        radial-gradient(circle at 90% 10%, rgba(255, 204, 112, 0.3), transparent 10%);
+    /* oren */
 }
 
 main {
