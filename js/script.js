@@ -1,9 +1,8 @@
 $(document).ready(function () {
-    const homeHeader = $('#home header b');
     const name = prompt('Masukkan nama Anda: ');
 
     if (name) {
-        homeHeader.text('Hi, ' + name);
+        $('#home header b').text('Hi, ' + name);
         $('#inputNama').val(name)
     }
 
