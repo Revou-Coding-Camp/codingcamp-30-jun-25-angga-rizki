@@ -11,11 +11,11 @@ $(document).ready(function () {
         e.preventDefault();
 
         const data = {
-            nama: $('#inputNama').val(),
+            nama: $('#inputNama').val().trim(),
             email: $('#inputEmail').val(),
             telepon: $('#inputTelepon').val(),
             jenisKelamin: $(this).find('input[name="inputJenisKelamin"]:checked').val(),
-            pesan: escapeHtml($('#inputPesan').val())
+            pesan: escapeHtml($('#inputPesan').val().trim())
         };
 
         const validate = validateForm(data);
