@@ -2,7 +2,7 @@ $(document).ready(function () {
     const name = prompt('Masukkan nama Anda: ');
 
     if (name) {
-        $('#home header b').text('Hi, ' + name);
+        $('#homeHeader b').text('Hi, ' + name);
         $('#inputNama').val(name)
     }
 
