@@ -25,7 +25,7 @@ $(document).ready(function () {
 function renderFormResult($resultContainer, { nama, email, telepon, jenisKelamin, pesan }) {
     const resultHtml = `
         <div class="relative flex flex-col my-5 w-full bg-white shadow-sm border border-slate-200 rounded-lg w-96">
-            <div class="mx-3 mb-0 border-b border-slate-200 pt-3 pb-2 px-1">
+            <div class="mx-3 mb-0 border-b border-slate-200 pt-3 pb-2 px-1 text-center">
                 <span class="text-sm text-slate-600 font-medium">
                     Data Anda
                 </span>
