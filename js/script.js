@@ -15,10 +15,11 @@ $(document).ready(function () {
             email: $('#inputEmail').val(),
             telepon: $('#inputTelepon').val(),
             jenisKelamin: $(this).find('input[name="inputJenisKelamin"]:checked').val(),
-            pesan: $('#inputPesan').val()
+            pesan: escapeHtml($('#inputPesan').val())
         };
 
-        renderFormResult($('#formResult'), data);
+        const validate = validateForm(data);
+        validate.status ? renderFormResult($('#formResult'), data) : alert(validateMessage(validate.message));
     });
 });
 
@@ -47,16 +48,60 @@ function renderFormResult($resultContainer, { nama, email, telepon, jenisKelamin
     $resultContainer.html(resultHtml);
 }
 
-// Function to validate the form
-function validateForm() {
-    // Get the input element by its ID
-    const nameInput = document.getElementById('name-input');
+function validateMessage({ nama, email, telepon, jenisKelamin, pesan }) {
+    let message = "";
+    message += nama ? `${nama}\n\n` : '';
+    message += email ? `${email}\n\n` : '';
+    message += telepon ? `${telepon}\n\n` : '';
+    message += jenisKelamin ? `${jenisKelamin}\n\n` : '';
+    message += pesan ? `${pesan}` : '';
+    return message;
+}
 
-    if (nameInput.value === '') {
-        // If the input is empty, alert the user
-        alert('Please enter your name!');
-    } else {
-        // If the input is valid, display the name in the result form
-        document.getElementById('result-form').innerHTML = nameInput.value;
+// Function to validate the form
+function validateForm({ nama, email, telepon, jenisKelamin, pesan }) {
+    const rules = {
+        nama: { regex: /^[a-zA-Z\s]+$/ },
+        email: { regex: /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/ },
+        telepon: { regex: /^[0-9]{10,13}$/ },
+        jenisKelamin: ['male', 'female']
+    };
+
+    const result = { status: true, message: {} };
+
+    if (!nama || !rules.nama.regex.test(nama)) {
+        result.status = false;
+        result.message['nama'] = 'Nama harus diisi dan hanya boleh huruf dan spasi';
     }
+
+    if (!email || !rules.email.regex.test(email)) {
+        result.status = false;
+        result.message['email'] = 'Email harus diisi dan format email harus sesuai';
+    }
+
+    if (!telepon || !rules.telepon.regex.test(telepon)) {
+        result.status = false;
+        result.message['telepon'] = 'Telepon harus diisi dan hanya boleh angka sebanyak 10-13 digit';
+    }
+
+    if (!jenisKelamin || !rules.jenisKelamin.includes(jenisKelamin)) {
+        result.status = false;
+        result.message['jenisKelamin'] = 'Jenis kelamin harus diisi';
+    }
+
+    if (!pesan) {
+        result.status = false;
+        result.message['pesan'] = 'Pesan harus diisi';
+    }
+
+    return result;
+}
+
+function escapeHtml(unsafe) {
+    return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 }
