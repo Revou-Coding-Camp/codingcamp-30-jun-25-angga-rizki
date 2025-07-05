@@ -1,9 +1,8 @@
 $(document).ready(function () {
-    const homeHeader = $('#home header b');
     const name = prompt('Masukkan nama Anda: ');
 
     if (name) {
-        homeHeader.text('Hi, ' + name);
+        $('#home header b').text('Hi, ' + name);
         $('#inputNama').val(name)
     }
 
@@ -19,7 +18,7 @@ $(document).ready(function () {
         };
 
         const validate = validateForm(data);
-        validate.status ? renderFormResult($('#formResult'), data) : alert(validateMessage(validate.message));
+        validate.status ? renderFormResult($('#formResult'), data) : alert(validationMessage(validate.message));
     });
 });
 
@@ -48,7 +47,7 @@ function renderFormResult($resultContainer, { nama, email, telepon, jenisKelamin
     $resultContainer.html(resultHtml);
 }
 
-function validateMessage({ nama, email, telepon, jenisKelamin, pesan }) {
+function validationMessage({ nama, email, telepon, jenisKelamin, pesan }) {
     let message = "";
     message += nama ? `${nama}\n\n` : '';
     message += email ? `${email}\n\n` : '';
